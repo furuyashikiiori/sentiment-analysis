@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block title %} 感情分析 {% endblock %} {% block
+content %}
+<h2>感情分析</h2>
+<form action="{{ url_for('main.analyze') }}" method="post">
+  <label for="text">テキストを入力してください:</label><br />
+  <textarea id="text" name="text" rows="4" cols="50">{{ text }}</textarea><br />
+  <input type="submit" value="分析" />
+</form>
+{% if sentiment %}
+<h3>感情: {{ sentiment }}</h3>
+{% endif %} {% endblock %}
