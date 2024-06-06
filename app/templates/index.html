@@ -7,12 +7,34 @@
   </head>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
   <body>
-    <h1>テキスト感情分析</h1>
+    <header>
+      <h1>テキスト感情分析</h1>
+    </header>
+
+    <h3>下記の5種類に分類します!</h3>
+    <li class="sentiment_list">
+      <ul>
+        Very Negative
+      </ul>
+      <ul>
+        Negative
+      </ul>
+      <ul>
+        Neutral
+      </ul>
+      <ul>
+        Positive
+      </ul>
+      <ul>
+        Very Positive
+      </ul>
+    </li>
     <div>
       <p>ここにテキストを入力してください ↓</p>
     </div>
     <form id="sentiment-form">
       <textarea id="input-text" name="input-text" rows="4" cols="50"></textarea>
+      <br />
       <button type="submit">分析</button>
     </form>
     <div id="loading-message" style="display: none">読み込み中...</div>
